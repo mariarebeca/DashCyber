@@ -1,0 +1,46 @@
+### Get Hosts
+
+GET http://localhost:3000/task/
+
+### Create Host
+
+POST http://localhost:3000/task/
+Content-Type: application/json
+
+{
+    "minutos": "*",
+    "horas": "*",
+    "diaMes": "*",
+    "mes": "*",
+    "diaSemana": "*",
+    "user": "web-3",
+    "tarefa": "echo 'teste do web-3'"
+}
+
+### Update Host (PUT), atualização completa
+
+PUT http://localhost:3000/task/3
+Content-Type: application/json
+
+{
+    "minutos": "*",
+    "horas": "*",
+    "diaMes": "*",
+    "mes": "*",
+    "diaSemana": "*",
+    "user": "web-2",
+    "tarefa": "echo 'teste do web-2'"
+}
+
+### Update Host (PATCH), atualização parcial
+
+PATCH http://localhost:3000/task/4
+Content-Type: application/json
+
+{
+  "minutos": "10"
+}
+
+### Delete Host
+
+DELETE http://localhost:3000/task/5
