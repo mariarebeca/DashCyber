@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dash Cron</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/pages.css" rel="stylesheet">
+  <link href="css/font.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sarpanch&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+<div class="bg"></div>
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar. Menu Laretal -->
+    <div class="bg-re border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading estext">Dash Cron</div>
+      <div class="list-group list-group-flush">
+        <a href="paginainicial.html" class="list-group-item list-group-item-action bg-re estext">Página Inicial</a>
+        <a href="listar.html" class="list-group-item list-group-item-action bg-re estext">Tabela do Cron</a>
+        <a href="agendar.html" class="list-group-item list-group-item-action bg-re estext">Agendar Tarefas</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <!--Navebar. Conteúdo da parte de cima da página -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-antique border-bottom">
+        <button class="btn btn-re" id="menu-toggle">Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="paginainicial.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right bg-re" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Como Usar</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        </nav>
+      
+        <div class="container-fluid">
+            <h3 class="text-center mt-5">Agendamento de tarefas</h2>
+        
+                
+        <div class="card">
+          <div class="card-header font-weight-bold text-center">
+            Parâmetros
+            <div class="float-right m-0">
+              <i class="fas fa-plus" id="createBtn" data-toggle="modal" data-target="#FormModal" onclick="addTask()"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-hosts">
+              <thead>
+                <tr>
+                  <th>Minutos</th>
+                  <th>Hora</th>
+                  <th>Dia</th>
+                  <th>Mês</th>
+                  <th>Dia da Semana</th>
+                  <th>Comando</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        
+        <form id="taskForm">
+            <div class="modal fade" id="FormModal" tabindex="-1" aria-labelledby="taskFormLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="FormLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="task-tarefa">Tarefa(comando)</label>
+                      <input type="text" class="form-control" id="task-tarefa" name="tarefa">
+                    </div>
+                    <div class="form-group">
+                      <label for="task-hora">Hora</label>
+                      <input type="text" class="form-control" id="task-hora" name="hora">
+                    </div>
+                    <div class="form-group">
+                      <label for="task-minutos">Minutos</label>
+                      <input type="text" class="form-control" id="host-mask" name="mask">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-diaMes">Dia do Mês</label>
+                        <input type="text" class="form-control" id="task-diaMes" name="diaMes">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-diaSemana">Dia da Semana</label>
+                        <input type="text" class="form-control" id="task-diaSemana" name="diaSemana">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-mes">Mês</label>
+                        <input type="text" class="form-control" id="task-mes" name="mes">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+      
+          <form id="formDeleteTask">
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="deleteLabel">Excluir tarefa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Deseja realmente excluir <span id="modal-task-tarefa"></span>?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary" id="deleteBtn">Excluir</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+    
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+</body>
+
+</html>
