@@ -36,19 +36,16 @@ function createActions(task) {
       class="fas fa-pencil-alt mr-2"
       data-toggle="modal"
       data-target="#hostFormModal"
-      onclick="loadFormUpdateHost(${task.tarefa}, '${task.horas}', '${task.diaMes}', '${task.mes}','${task.diaSemana}', '${task.minutos}')">
+      onclick="loadFormUpdate(${task.tarefa}, '${task.horas}', '${task.diaMes}', '${task.mes}','${task.diaSemana}', '${task.minutos}')">
     </i>
     <i
       class="far fa-trash-alt mr-2"
       data-toggle="modal"
-      data-target="#deleteHostModal"
-      onclick="deleteHost(${task.tarefa})">
-    </i>
-    <i
-      class="fas fa-stopwatch"
-      onclick="loadTimeSeries(${task.tarefa})">
+      data-target="#deleteModal"
+      onclick="delete(${task.tarefa})">
     </i>
   `;
 }
+
 
 

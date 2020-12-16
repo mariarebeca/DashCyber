@@ -42,26 +42,6 @@ async function destroy(resource) {
     method: "delete"
   });
 }
-/*
-function createActions(host) {
-  return `
-    <i
-      class="fas fa-pencil-alt mr-2"
-      data-toggle="modal"
-      data-target="#hostFormModal"
-      onclick="loadFormUpdateHost(${host.id}, '${host.name}', '${host.address}', '${host.mask}')">
-    </i>
-    <i
-      class="far fa-trash-alt mr-2"
-      data-toggle="modal"
-      data-target="#deleteHostModal"
-      onclick="deleteHost(${host.id}, '${host.name}')">
-    </i>
-    <i
-      class="fas fa-stopwatch"
-      onclick="loadTimeSeries(${host.id}, '${host.name}')">
-    </i>
-  `;
-}
-*/
+
+
 export default { create, read, update, destroy };

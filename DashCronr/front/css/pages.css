@@ -33,11 +33,18 @@ body {
 	100% { transform: translate(5%,0) }
 }
 
-.card-header, .table-header {
+.card-header, .table-header, .modal-header, .modal-footer {
 	background-color: rgb(236, 218, 190);
 }
 
-.card, .table, .card-body, .table-body{
+.card, .table, .card-body, .table-body, .modal-body, .modal-content, .form-group{
 	background-color: rgb(233, 223, 208);
 	margin: 2em;
+}
+
+.fa-trash-alt,
+.fa-pencil-alt,
+.fa-plus,
+.fa-stopwatch {
+  cursor: pointer;
 }
