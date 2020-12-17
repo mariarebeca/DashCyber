@@ -8,7 +8,7 @@ Aplicação web “Dash Cron” tem como objetivo permitir agendar  tarefas para
 
 * Ernandez Domingos dos Santos (20181380050)
 * Maria Rebeca Gomes da Silva (20171380014)
-* Marcelo Inácio da Silva (20172380024)
+
 
 ## Requisitos mínimos
 
@@ -21,4 +21,4 @@ Aplicação web “Dash Cron” tem como objetivo permitir agendar  tarefas para
 ## Contato
 * Ernandez (ernandez.santos@academico.ifpb.edu.br)
 * Maria Rebeca ( @academico.ifpb.edu.br)
-* Marcelo ( @academico.ifpb.edu.br)
+
