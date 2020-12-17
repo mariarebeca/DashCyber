@@ -20,5 +20,5 @@ Aplicação web “Dash Cron” tem como objetivo permitir agendar  tarefas para
 
 ## Contato
 * Ernandez (ernandez.santos@academico.ifpb.edu.br)
-* Maria Rebeca ( @academico.ifpb.edu.br)
+* Maria Rebeca ( maria.rebeca@academico.ifpb.edu.br)
 
